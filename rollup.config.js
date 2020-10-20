@@ -51,7 +51,8 @@ const configs = {
 }
 
 const defaultFormats = ['esm', 'cjs']
-const inlineFormats = process.env.FORMATS && process.env.FORMATS.split(',')
+// Consider modifying the connection method of multiple parameters, such as: modify, as.
+const inlineFormats = process.env.FORMATS && process.env.FORMATS.split('.')
 const packageFormats = inlineFormats || packageOptions.formats || defaultFormats
 const packageConfigs = process.env.PROD_ONLY
   ? []
